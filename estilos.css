@@ -1,0 +1,345 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 1000px;
+    background: #fff;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 40px 75px rgba(0, 0, 0, 1);
+}
+
+.contenedor .izquierda {
+    position: relative;
+    background: #776155;
+    padding: 40px;
+}
+
+.contenedor#blur.active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#popup {
+    background-color: #fff;
+    position: fixed;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 10);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#popup.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+
+.perfil {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.perfil .foto_de_perfil {
+    position: relative;
+    width: 200px;
+    height: 200px; 
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.perfil .foto_de_perfil img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.perfil h2 {
+    color: #fff;
+    font-size: 1.7em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.perfil h2 span {
+font-size: 0.6em;
+font-weight: 300;
+}
+
+.infocontacto {
+    padding-top: 25px;
+}
+
+.infocontacto img {
+    width: 350px;
+    margin: -57px;
+}
+
+.titulo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.infocontacto ul {
+    position: relative;
+}
+
+.infocontacto ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.infocontacto ul li .icono {
+    display: inline-block;
+    width: 15px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.infocontacto ul li span {
+    color: #fff;
+    font-weight: 300;
+   
+    
+}
+
+.educacion img {
+    width: 350px;
+    margin: -57px;
+}
+
+.educacion li {
+    margin-bottom: 15px;  
+    list-style: none;  
+}
+
+.educacion li h5 {
+   font-size: 15px;
+   color: rgb(255, 255, 255); 
+   font-weight: 650;
+}
+
+.educacion li h4 {
+    color: #fff;
+    font-weight: 300;
+}
+
+.educacion li h4:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+}
+
+.contenedor .derecha {
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.experiencia {
+    
+    margin-bottom: 50px;
+    font-size: 0.9em;
+}
+
+.experiencia :last-child {
+    margin-bottom: 0;
+}
+
+.titulo2 {
+    font-size: 2.5em;
+    color: #776155;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #403F45;
+}
+
+
+.experiencia .caja {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    line-height: 1.6em;
+}
+
+.experiencia .caja .anio {
+    min-width: 200px;
+}
+
+.experiencia .caja .anio h5 {
+    text-transform: uppercase;
+    color: #776155;
+    font-weight: 600;  
+}
+
+.experiencia .caja .texto h4 {
+    text-transform: uppercase;
+    color: #403F45;
+    font-size: 16px;
+}
+
+.conocimientos .caja {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.conocimientos .caja h4 {
+    text-transform: uppercase;
+    color:#403F45;
+    font-weight: 500;
+}
+
+.conocimientos .caja .porcentaje {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background:#e0c9bd;
+}
+
+.conocimientos .caja .porcentaje div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:#403F45;
+}
+
+.agradecimiento {
+    padding-bottom:  1000px;
+    background-color:#776155;
+    width: 1000px;
+    height: 50px;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    padding: 10px;
+    margin: -15px;
+    display: grid;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width:1000px)
+{
+    .contenedor {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+
+
+}
+
+@media (max-width:600px) {
+    .experiencia .caja {
+        flex-direction: column;
+    }
+
+    #popup {
+        font-size: 0.9em;
+        width: 500px;
+    }
+}
+
+@media (max-width:400px) {
+
+    #agradecimiento {
+        font-size: 0.9em;
+        width: 90%;
+        
+    }
+ 
+ 
+    #popup {
+        font-size: 0.9em;
+        width: 90%;
+        justify-content: center;
+    }
+    
+    .infocontacto {
+        margin-top: 1em;
+        position: relative;
+        font-size: 0.9em;
+        display: grid;  
+    }
+
+    .experiencia {
+        position: relative;
+        width: 80%;
+        display: grid;  
+    }
+
+    .titulo {
+        font-size: 0.9em;
+        position: relative;
+    }
+
+
+    .titulo2 {
+        font-size: 1em;
+        position: relative;
+    }
+
+    .conocimientos {
+        position: relative;
+    }
+
+    .flecha {
+        padding-top: 2em;
+        padding-right: 2em; 
+    }
+
+}
+
